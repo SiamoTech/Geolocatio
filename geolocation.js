@@ -82,19 +82,19 @@ function add_marker_point(lon, lat) {
 
 function  switch_to_layer(layer_name) {
     if(layer_name == "cycle")
-        layer_url = "https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=11f6fcd661ff4b408d8aa7befa615144";
+        layer_url = "https://tile.thunderforest.com/cycle/{z}/{x}/{y}.png?apikey=f038eed9b9944285888511304cc28d0a";
     else if(layer_name == "transport")
         layer_url = "https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=11f6fcd661ff4b408d8aa7befa615144";
     else if(layer_name == "default")
         layer_url = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
     else if(layer_name == "outdoor")
-        layer_url = "https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png";    
+        layer_url = "https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png?apikey=f038eed9b9944285888511304cc28d0a";    
     else if(layer_name == "landscape")
-        layer_url = "https://tile.thunderforest.com/landscape/{z}/{x}/{y}.png"; 
+        layer_url = "https://tile.thunderforest.com/landscape/{z}/{x}/{y}.png?apikey=f038eed9b9944285888511304cc28d0a"; 
     else if(layer_name == "spinal")
-        layer_url = "https://tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png"; 
+        layer_url = "https://tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png?apikey=f038eed9b9944285888511304cc28d0a"; 
     else if(layer_name == "neighbourhood")
-        layer_url = "https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png";     
+        layer_url = "https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png?apikey=f038eed9b9944285888511304cc28d0a";     
 
     map.eachLayer(function (layer) {
         map.removeLayer(layer);
