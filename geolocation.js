@@ -17,17 +17,35 @@ $(document).ready(function() {
         set_current_position();
     });
     
-    $("#cycle").click(function(){
-        switch_to_layer("cycle");
+    $("#cycle").click(function(){ //cycle
+        switch_to_layer("cycle"); //cycle
     });
 
-    $("#transport").click(function(){
-        switch_to_layer("transport");
+    $("#transport").click(function(){ //transport
+        switch_to_layer("transport"); //transport
     });
 
-    $("#default").click(function(){
-        switch_to_layer("default");
+    $("#default").click(function(){ //default
+        switch_to_layer("default"); //default
     });
+    $("#outdoor").click(function(){  //outdoors
+        switch_to_layer("outdoor"); //outdoor
+    });
+   $("#landscape").click(function(){ //landscape
+       switch_to_layer("landscape");//landscape
+   });   
+   $("#spinal").click(function(){  //spinal
+    switch_to_layer("spinal"); //spinal
+}); 
+$("#spinal").click(function(){  //spinal
+    switch_to_layer("spinal"); //spinal
+}); 
+$("#neighbourhood").click(function(){  //spinal
+    switch_to_layer("neighbourhood"); //spinal
+});
+
+   
+
 
 });
 
@@ -69,6 +87,15 @@ function  switch_to_layer(layer_name) {
         layer_url = "https://tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=11f6fcd661ff4b408d8aa7befa615144";
     else if(layer_name == "default")
         layer_url = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+    else if(layer_name == "outdoor")
+        layer_url = "https://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png";    
+    else if(layer_name == "landscape")
+        layer_url = "https://tile.thunderforest.com/landscape/{z}/{x}/{y}.png"; 
+    else if(layer_name == "spinal")
+        layer_url = "https://tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png"; 
+    else if(layer_name == "neighbourhood")
+        layer_url = "https://tile.thunderforest.com/neighbourhood/{z}/{x}/{y}.png";     
+
     map.eachLayer(function (layer) {
         map.removeLayer(layer);
     });
